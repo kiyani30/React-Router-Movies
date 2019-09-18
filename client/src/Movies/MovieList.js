@@ -4,7 +4,7 @@ import axios from 'axios';
 
 
 const MovieList = props => {
-  const [movies, setMovies] = useState([])
+  const [movie, setMovies] = useState([])
   useEffect(() => {
     const getMovies = () => {
       axios
@@ -22,11 +22,11 @@ const MovieList = props => {
   
   return (
     <div className="movie-list">
-      {movies.map(movie => (
-        <MovieDetails key={movie.id} movie={movie} />
-      ))}
-    </div>
-    <Link to={`/movies/${movie.id}`}>Click to see Movie</Link>
+      {/* {movies.map(movie => (
+        // <MovieDetails key={movie.id} movie={movie} />
+      ))} */}
+     <Link to={`/movies/${movie.id}`}>Click to see Movie</Link>
+     </div>
   );
 }
 
